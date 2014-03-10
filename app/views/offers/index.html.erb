@@ -1,0 +1,7 @@
+<%= link_to "Crowl!", offers_path, :method => :post, :class => "btn btn-primary" %> <%= @offers.count <= 1 ? "#{@offers.count} offer" : "#{@offers.count} offers"%><br/><br/>
+<%  @offers.each do |offer| %>
+<div style="border: 1px solid black; width: 550px; height: 50px; padding: 15px;">
+    <%= offer.title %> <br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;<%= offer.description %>
+  </div><br/>
+<% end %>

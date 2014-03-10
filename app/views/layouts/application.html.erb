@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cjtest</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div class="navbar navbar-fluid-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="container-fluid nav-collapse">
+            <ul class="nav pull-left">
+              <li><%= link_to "Cjtest", "/", :class=>"brand" %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10 offset1">
+          <% if notice %>
+            <div class="alert alert-info" style="margin-top: 0px;">
+              <a class="close" data-dismiss="alert">×</a>
+              <strong><%= notice %></strong>
+            </div>
+          <% end %>
+          <% if alert %>
+            <div class="alert alert-error">
+              <a class="close" data-dismiss="alert">×</a>
+              <strong><%= alert %></strong>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </body>
+</html>
